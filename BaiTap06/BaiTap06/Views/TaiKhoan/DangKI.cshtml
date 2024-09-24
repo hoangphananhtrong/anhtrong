@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Dang ki";
+}
+
+@model TaiKhoanViewmodel
+
+<div class="container">
+    <h3>dang ki</h3>
+    <form method="post">
+        <label aps-for="Username">Username: </label>
+        <input asp-for="Username" type="text" class="form-control" />
+
+        <label asp-for="Password"> Password </label>
+        <input asp-for="Password" type="text" class="form-control" />
+
+        <button type="submit" class="btn btn-primary"> đăng kí</button>
+
+        @if (Model != null)
+        {
+            <p>Username đã nhập là: @Model.Username</p>
+            <p>Password đã nhập là: @Model.Password</p>
+        }
+    </form>
+</div>
